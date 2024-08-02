@@ -1,1 +1,0 @@
-# kuldeepsidhu.github.io
