@@ -1,2 +1,80 @@
-<h1> Welcome !</h1>
-<a href="blog.html">Blog</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1> Welcome !</h1>
+    <a href="blog.html">Blog</a>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post" id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            var name = document.getElementById('name').value;
+            var message = document.getElementById('message').value;
+
+            // You can perform form validation here if needed
+
+            // Simulate form submission (you can replace this with actual AJAX request)
+            console.log('Name:', name);
+            console.log('Message:', message);
+
+            // Clear form fields (optional)
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
